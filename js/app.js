@@ -1,11 +1,17 @@
 // Enemies our player must avoid
-let Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
 
+
+let Enemy = function(x,y,speed) {
+    // letiables applied to each of our instances go here,
+    // we've provided one for you to get started
+    this.x=x;
+    this.y=y;
+    this.speed=speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+    this.width=101;
+    this.height=171;
 };
 
 // Update the enemy's position, required method for game
@@ -23,29 +29,30 @@ Enemy.prototype.render = function() {
 
 // Now write your own player class
 // Enemies our player must avoid
-let Player = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
-    this.sprite = 'images/char-boy.png';
+let Player = function(x,y,sprite) {
+    this.x=x;
+    this.y=y;
+    this.width=101;
+    this.height=171;
+    if(sprite==undefined)
+        this.sprite = 'images/char-boy.png';
+    else
+        this.sprite=sprite;
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+// This class requires an update(), render() and
+// a handleInput() method.
 Player.prototype.update = function(dt) {
     //player logic here
+};
+
+Player.prototype.handleInput = function() {
+    //handle input
 };
 
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
-// This class requires an update(), render() and
-// a handleInput() method.
-Player.prototype.handleInput = function() {
-    //handle input
 };
 
 // Now instantiate your objects.
