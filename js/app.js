@@ -1,5 +1,7 @@
 // Enemies our player must avoid
-
+let min=1;
+let max=2;
+let won=false;
 
 let Enemy = function(x,y,speed) {
     // letiables applied to each of our instances go here,
@@ -58,8 +60,13 @@ Player.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 let allEnemies=[];
+const enemy1 = new Enemy(-101, 63, 80);
+const enemy2 = new Enemy(-707, 130, 100);
+const enemy3 = new Enemy(-303, 145, 160);
+const enemy4 = new Enemy(-505 , 225, 90);
+allEnemies.push(enemy1, enemy2, enemy3, enemy4);
 // Place the player object in a variable called player
-let player=new Player();
+let player=new Player(202,400,'images/char-boy.png');
 
 
 // This listens for key presses and sends the keys to your
