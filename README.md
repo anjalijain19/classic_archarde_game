@@ -2,13 +2,19 @@
 
 ## Table of Contents
 
+* [Getting Started](#gettingstarted)
 * [Instructions](#instructions)
-* [Acknowledgement](#ccknowledgement)
+* [Acknowledgement](#acknowledgement)
 * [Contributing](#contributing)
 
 ### Prerequisites
 
 * sweetAlert2
+
+## Getting Started
+Clone this project on you machine or download as zip folder and extract zip on your machine. Go to the project folder and open index.html file.
+
+
 
 ## Instructions
 Use the arrow keys on your keyboard to move the player left, right, up, down and reach the water without colliding with the bug to win the game ,
