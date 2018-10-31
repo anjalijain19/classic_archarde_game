@@ -48,8 +48,20 @@ Player.prototype.update = function(dt) {
     //player logic here
 };
 
-Player.prototype.handleInput = function() {
-    //handle input
+Player.prototype.handleInput = function(arrowKey) {
+    switch (arrowKey){
+        case 'left':
+            this.x-=101;
+            break;
+        case 'right':
+            this.x+=101;
+            break;
+        case 'up':
+            this.y-=85;
+            break;
+        case 'down':
+            this.y+=85;
+    }
 };
 
 // Draw the player on the screen, required method for game
