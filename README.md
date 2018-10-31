@@ -11,7 +11,7 @@
 * sweetAlert2
 
 ## Instructions
-Use the arrow keys on your kyborad to move the player left, right, up, down and reach the water without colliding with the bug to win the game ,
+Use the arrow keys on your keyboard to move the player left, right, up, down and reach the water without colliding with the bug to win the game ,
 if you collide with the bug you will loose the game and reset to the start position.
 
 
