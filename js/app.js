@@ -55,6 +55,14 @@ let Player = function(x,y,sprite) {
 // a handleInput() method.
 Player.prototype.update = function(dt) {
     //player logic here
+    for (let enemy of allEnemies) {
+        /*if (this.x < enemy.x + enemy.width  && this.x + this.width  > enemy.x &&
+         this.y < enemy.y + enemy.height && this.y + this.height > enemy.y)*/
+        if(this.x < enemy.x + 70 && this.x + 70 > enemy.x && this.y < enemy.y + 25 && this.y+30 > enemy.y){
+            // The objects are touching
+            this.reset();
+        }
+    }
 };
 
 Player.prototype.handleInput = function(arrowKey) {
