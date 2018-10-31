@@ -51,16 +51,20 @@ Player.prototype.update = function(dt) {
 Player.prototype.handleInput = function(arrowKey) {
     switch (arrowKey){
         case 'left':
-            this.x-=101;
+            if(this.x>0)
+                this.x-=101;
             break;
         case 'right':
-            this.x+=101;
+            if((this.x+101)<ctx.canvas.width)
+                this.x+=101;
             break;
         case 'up':
-            this.y-=85;
+            if(this.y>0)
+                this.y-=85;
             break;
         case 'down':
-            this.y+=85;
+            if(this.y<400)
+                this.y+=85;
     }
 };
 
