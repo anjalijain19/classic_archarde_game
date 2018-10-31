@@ -22,6 +22,15 @@ Enemy.prototype.update = function(dt) {
     if(this.x < ctx.canvas.width) {
         this.x += this.speed * dt;
     }
+    else {
+        let random = Math.random() * (+max - +min) + +min;
+        this.x -= this.x * random;
+        if(this.x>-101)
+        {
+            random = Math.random() * (+max - +min) + +min;
+            this.x -= this.x;
+        }
+    }
 };
 
 // Draw the enemy on the screen, required method for game
