@@ -68,6 +68,13 @@ Player.prototype.handleInput = function(arrowKey) {
     }
 };
 
+// reset player position to start
+Player.prototype.reset = function() {
+    this.x=202;
+    this.y=400
+    won=false;
+};
+
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
